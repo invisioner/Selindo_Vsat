@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/side_nav_bar"
+    tools:showIn="navigation_view"
+    android:id="@+id/navigationOption">
+
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/setting"
+        android:textColor="@color/colorGrey500"
+        android:fontFamily="@font/ubuntu_r"
+        android:title="Change Password" />
+
+    <item
+        android:visible="false"
+        android:id="@+id/nav_logOut"
+        android:icon="@drawable/exit"
+        android:textColor="@color/colorGrey500"
+        android:fontFamily="@font/ubuntu_r"
+        android:title="Log Out" />
+
+</menu>

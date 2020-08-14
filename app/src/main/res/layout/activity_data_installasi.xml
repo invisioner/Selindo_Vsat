@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.GeneralInfoActivity">
+
+    <RelativeLayout
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/diameter_antena"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Diameter Antena"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arah Sudut Antena :"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/polarisasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:hint="Polarisasi"
+                    android:textColor="@android:color/black"
+                    android:text=""
+                    android:inputType="textAutoComplete"
+                    android:maxLength="50"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/elevasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Elevasi"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/azimuth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Azimuth"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Source Listrik"/>
+
+                <Spinner
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/source_listrik"
+                    android:entries="@array/source_lstrk"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apakah sumber listrik modem menggunakan kabel extension / kabel roll?"/>
+
+                <Spinner
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/kabel_roll"
+                    android:entries="@array/kabel_roll"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apakah Perangkat Indoor terhubung ke UPS ? "/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:layout_gravity="center"
+                        android:id="@+id/ups"
+                        android:entries="@array/kabel_roll"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/kva"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="KVA"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Frequency Band /Modulation"/>
+
+                <Spinner
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/modulation"
+                    android:entries="@array/frequency_band"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/ip_management"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="VSAT Management IP Address"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/receive_symbole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Receive Symbole Rate"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pengukuran tegangan sumber listrik yang terhubung ke perangkat modem."/>
+
+                <TableLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:background="@color/colorGrey200"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="Tegangan"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="PLN"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="UPS"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="Genset"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="4" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="@string/phasa_netral"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <EditText
+                            android:id="@+id/pln1"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="PLN 1"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="2"/>
+
+                        <EditText
+                            android:id="@+id/ups1"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="UPS 1"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="3"/>
+
+                        <EditText
+                            android:id="@+id/genset1"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="Genset 1"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="4"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="@string/phasa_ground"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <EditText
+                            android:id="@+id/pln2"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="PLN 2"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="2"/>
+
+                        <EditText
+                            android:id="@+id/ups2"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="UPS 2"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="3"/>
+
+                        <EditText
+                            android:id="@+id/genset2"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="Genset 2"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="4"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="@string/netral_ground"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <EditText
+                            android:id="@+id/pln3"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="PLN 3"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="2"/>
+
+                        <EditText
+                            android:id="@+id/ups3"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="UPS 3"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="3"/>
+
+                        <EditText
+                            android:id="@+id/genset3"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:hint="Genset 3"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="4"/>
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/satelite_longitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Satelite Longitude"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LAN-1 IP Address"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/ip_lan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="IP LAN"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/subnet_mask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Subnet Mask"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LAN-2 IP Address"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/ip_lan2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="IP LAN"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/subnet_mask2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Subnet Mask"
+                        android:textColor="@android:color/black"
+                        android:text=""
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hasil Test Ping"/>
+
+                <TableLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:background="@color/colorGrey200"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="Alamat"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="Success"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="Loss"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="Keterangan"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_column="4" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <EditText
+                            android:id="@+id/alamat1"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Alamat 1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="2"/>
+
+                        <EditText
+                            android:id="@+id/success1"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Success 1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="2"/>
+
+                        <EditText
+                            android:id="@+id/loss1"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Loss 1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="3"/>
+
+                        <EditText
+                            android:id="@+id/keterangan1"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Keterangan 1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="4"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <EditText
+                            android:id="@+id/alamat2"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Alamat 2"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="2"/>
+
+                        <EditText
+                            android:id="@+id/success2"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Success 2"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="2"/>
+
+                        <EditText
+                            android:id="@+id/loss2"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Loss 2"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="3"/>
+
+                        <EditText
+                            android:id="@+id/keterangan2"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Keterangan 2"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="4"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <EditText
+                            android:id="@+id/alamat3"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Alamat 3"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="2"/>
+
+                        <EditText
+                            android:id="@+id/success3"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Success 3"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="2"/>
+
+                        <EditText
+                            android:id="@+id/loss3"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Loss 3"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="3"/>
+
+                        <EditText
+                            android:id="@+id/keterangan3"
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="Keterangan 3"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_r"
+                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
+                            android:maxLength="50"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_column="4"/>
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnUpdateInstallasi"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:text="@string/button_simpan"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:background="@drawable/shape_rounded_btn"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

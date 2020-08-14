@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TaskDetailActivity">
+    <RelativeLayout
+        android:layout_below="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/progress_detail_task"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvLayout"
+                    android:layout_below="@+id/progress_detail_task"
+                    android:onClick="dataLokasi"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/rvUnitKerja"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llUnitkerja"
+                                android:orientation="horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/status_data_lokasi"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/ubuntu_r"
+                                    android:textColor="@android:color/black"
+                                    android:text="Data Lokasi"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:id="@+id/rvSatId"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvSatId"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SAT - ID"
+                                    android:textColor="@color/colorGrey500"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvIdSat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorGrey700"
+                                    android:text=""/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:visibility="gone"
+                            android:id="@+id/ViewLine"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/rvUnitKerja"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGrey500"/>
+
+                        <LinearLayout
+                            android:id="@+id/rvSid"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/ViewLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:id="@+id/llSid"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/ubuntu_r"
+                                    android:text="SID"/>
+
+                                <TextView
+                                    android:id="@+id/tvSid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/ubuntu_r"
+                                    android:textColor="@android:color/black"
+                                    android:text=""/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:id="@+id/rvTlpRemote"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvTlpRemote"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Telephone Remote"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/ubuntu_r"/>
+
+                                <TextView
+                                    android:id="@+id/tvNoTlpRemote"
+                                    android:visibility="visible"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/ubuntu_r"
+                                    android:textColor="@color/colorGrey500"
+                                    android:text="" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+                        <View
+                            android:id="@+id/viewLine1"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/rvSid"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGrey500"/>
+
+                        <LinearLayout
+                            android:id="@+id/llLayout1"
+                            android:layout_below="@+id/viewLine1"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/rvNamaUker"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/llNamaRemote"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/ubuntu_r"
+                                        android:text="Nama Remote"/>
+
+                                    <TextView
+                                        android:id="@+id/tvNamaRemote"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ubuntu_r"
+                                        android:textColor="@android:color/black"
+                                        android:text=""/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:id="@+id/llJabatan"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/tvJabatan"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Jabatan PIC"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/ubuntu_r"/>
+
+                                    <TextView
+                                        android:id="@+id/tvJabatanPic"
+                                        android:visibility="gone"
+                                        android:layout_below="@+id/tvJabatan"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@android:color/black"
+                                        android:fontFamily="@font/ubuntu_r"
+                                        android:layout_marginTop="22dp"
+                                        android:text="" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/viewLine2"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/llLayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGrey500"/>
+
+                        <LinearLayout
+                            android:id="@+id/rvNamaPicSat"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/viewLine2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llNamaPic"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/ubuntu_r"
+                                    android:text="Nama Pic"/>
+
+                                <TextView
+                                    android:id="@+id/tvNamaPic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/black"
+                                    android:text=""/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/rvTlpPic"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvTlpPic"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Telephone PIC"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/ubuntu_r"/>
+
+                                <TextView
+                                    android:id="@+id/tvNoPic"
+                                    android:visibility="visible"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/ubuntu_r"
+                                    android:textColor="@android:color/black"
+                                    android:text="" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <View
+                            android:id="@+id/viewLine3"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/rvNamaPicSat"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGrey500"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rvAlamat"
+                            android:layout_below="@+id/viewLine3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/llAlamat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/black"
+                                    android:fontFamily="@font/ubuntu_r"
+                                    android:text="Alamat"/>
+
+                                <TextView
+                                    android:id="@+id/tvAlamat"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/ubuntu_r"
+                                    android:textColor="@android:color/black"
+                                    android:text=""/>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/list_item"
+                    android:layout_below="@+id/cvLayout"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_below="@+id/cvLayout"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:id="@+id/rvGeneralInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="generalInfo"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/status_general_info"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="28dp"
+                                android:fontFamily="@font/ubuntu_r"
+                                android:layout_marginTop="6dp"
+                                android:textColor="@android:color/black"
+                                android:text="General Info" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_arrow_right_black" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewDataTeknisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGrey500"/>
+
+                        <RelativeLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:id="@+id/rvDataTeknis"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="dataTeknisi"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/status_data_teknisi"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="28dp"
+                                android:fontFamily="@font/ubuntu_r"
+                                android:layout_marginTop="6dp"
+                                android:textColor="@android:color/black"
+                                android:text="Data Teknis" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_arrow_right_black" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewDataBarang"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGrey500"/>
+
+                        <RelativeLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:id="@+id/rvDataTerpasang"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="dataBarang"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/status_data_barang"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:fontFamily="@font/ubuntu_r"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="6dp"
+                                android:textColor="@android:color/black"
+                                android:text="Data Barang" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_arrow_right_black" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewDataSurvey"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGrey500"/>
+
+                        <RelativeLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:id="@+id/rvSurvey"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="survey"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/status_survey"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:fontFamily="@font/ubuntu_r"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="6dp"
+                                android:textColor="@android:color/black"
+                                android:text="Data Survey" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_arrow_right_black" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewDataInstall"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGrey500"/>
+
+                        <RelativeLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:id="@+id/rvInstallasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="instalasi"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/status_installasi"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:fontFamily="@font/ubuntu_r"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="6dp"
+                                android:textColor="@android:color/black"
+                                android:text="Data Installasi" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_arrow_right_black" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewUploadPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGrey500"/>
+
+                        <RelativeLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:id="@+id/rvUploadPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="uploadPhoto"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/status_upload_photo"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:fontFamily="@font/ubuntu_r"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="6dp"
+                                android:textColor="@android:color/black"
+                                android:text="Upload Photo" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_arrow_right_black" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btnKonfirmasi"
+                    android:layout_below="@+id/list_item"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/shape_rounded_bg_blue"
+                    android:text="Konfirmasi Kegiatan"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</LinearLayout>

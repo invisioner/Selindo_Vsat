@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="selindoalpha.com.selindovsatprod">
+    <!-- Access Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Access Camera -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera.any" /> <!-- Access Storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Access GPS -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="whateverString"
+        android:icon="@mipmap/ic_launcher"
+        android:largeHeap="true"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/default_picture"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory">
+        <activity android:name=".Activity.ChangePassword"></activity>
+        <activity
+            android:name=".Activity.TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.SpdDetailActivity" />
+        <activity android:name=".Activity.ViewDetailPhotoActivity" />
+        <activity android:name=".Activity.InputSpdGambarActivity" />
+        <activity android:name=".Activity.ListSpdGambarActivity" />
+        <activity
+            android:name=".Activity.DataInstallasiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DataSurveyActivity"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".Activity.DetailPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".Activity.TaskListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SpdListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SpdInputActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.TaskDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DataLokasiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UploadDocumentSpdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GeneralInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DataTeknisiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DataBarangActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddBarangTerpasangActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddBarangRusakActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GalleryPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UploadPhotoActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

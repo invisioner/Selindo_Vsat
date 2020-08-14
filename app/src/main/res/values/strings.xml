@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Selindo Vsat</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_task">TASK</string>
+    <string name="title_spd">SPD</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Edi Susena</string>
+    <string name="nav_header_subtitle">Edi_susena@selindo.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="help_faq">Help &amp; FAQ</string>
+
+    <string name="start">START</string>
+
+    <string-array name="List_upload_spd">
+        <item> </item>
+        <item>Hotel</item>
+        <item>Transport</item>
+        <item>Buruh</item>
+        <item>Pengembalian Dana</item>
+    </string-array>
+
+    <string-array name="source_lstrk">
+        <item> </item>
+        <item>PLN</item>
+        <item>Genset</item>
+    </string-array>
+
+    <string-array name="type_kabel">
+        <item> </item>
+        <item>RG 6</item>
+        <item>RG 11</item>
+        <item>Comscope</item>
+    </string-array>
+
+    <string-array name="frequency_band">
+        <item> </item>
+        <item>C Band/BPSK</item>
+        <item>C Band/QPSK</item>
+        <item>C Band/8-PSK</item>
+    </string-array>
+
+    <string-array name="kabel_roll">
+        <item> </item>
+        <item>Ya</item>
+        <item>Tidak</item>
+    </string-array>
+
+    <string name="prompt">Select</string>
+
+    <string-array name="List_hub">
+        <item> </item>
+        <item>HX Cibinong</item>
+        <item>BRI HUB 1</item>
+        <item>BRI HUB 2</item>
+        <item>BRI HUB 3</item>
+    </string-array>
+
+    <string-array name="Ups">
+        <item> </item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Tanpa UPS</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phasa_netral">PHASA \n - NETRAL</string>
+    <string name="phasa_ground">PHASA \n - GROUND</string>
+    <string name="netral_ground">NETRAL \n - GROUND</string>
+    <string name="button_simpan">Simpan</string>
+    <string name="note_konfrim">*Apabila sudah di konfirmasi, maka data \n tidak bisa dirubah dan di hapus</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_test">TestActivity</string>
+
+</resources>

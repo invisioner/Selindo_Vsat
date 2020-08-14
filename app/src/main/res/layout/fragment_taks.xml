@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/task_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="75dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/open"
+                android:layout_marginEnd="2.5dp"
+                android:background="@drawable/shape_rounded_bg_blue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/statusOpen"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textAllCaps="true"
+                    android:text="Open"
+                    android:textSize="20sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/white"/>
+
+                <TextView
+                    android:id="@+id/countOpen"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/finish"
+                android:layout_marginLeft="2.5dp"
+                android:background="@drawable/shape_rounded_bg_blue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/statusFinish"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textAllCaps="true"
+                    android:text="Finish"
+                    android:textSize="20sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/white"/>
+
+                <TextView
+                    android:id="@+id/countFinish"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/rvCardHorizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:id="@+id/task_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:id="@+id/rvCardListTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="55dp"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+        <include layout="@layout/fragment_open"/>
+        <include layout="@layout/fragment_finish"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
