@@ -8,6 +8,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,6 +31,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import selindoalpha.com.selindovsatprod.Adapter.ListPhotoAdapter;
 import selindoalpha.com.selindovsatprod.Api.BaseUrl;
 import selindoalpha.com.selindovsatprod.Api.Mysingleton;
@@ -110,12 +113,10 @@ public class GalleryPhotoActivity extends AppCompatActivity {
             }
         });
 
-
         new AsyingGaleryPhoto().execute();
 
 
     }
-
 
     private class AsyingGaleryPhoto extends AsyncTask<Void, Void, String> {
 
@@ -135,6 +136,14 @@ public class GalleryPhotoActivity extends AppCompatActivity {
         protected String doInBackground(Void ... arg0) {
             return "OK";
         }
+    }
+
+    public void refresh() {
+        Intent i = new Intent(GalleryPhotoActivity.this, GalleryPhotoActivity.class);
+        overridePendingTransition(0, 0);
+        startActivity(i);
+        overridePendingTransition(0, 0);
+        finish();
     }
 
     @SuppressLint("RestrictedApi")

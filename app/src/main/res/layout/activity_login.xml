@@ -183,7 +183,7 @@
                         android:layout_marginBottom="0dp"
                         android:gravity="center"
                         android:fontFamily="@font/ubuntu_r"
-                        android:text="Version 1.5.0"
+                        android:text="@string/app_version"
                         android:textSize="@dimen/activity_vertical_margin"
                         android:textStyle="bold" />
 

@@ -85,7 +85,6 @@ public class UploadPhotoActivity extends AppCompatActivity {
         mDescrip = findViewById(R.id.etDescrip);
         mKeterangan = findViewById(R.id.etKeterangan);
 
-
     }
 
     public static String encodeToBase64(Bitmap image) {
@@ -147,7 +146,7 @@ public class UploadPhotoActivity extends AppCompatActivity {
 
 //        String vid = sharedPrefDataTask.GetTaskVid();
 //        String noTask = sharedPrefDataTask.GetTaskNoTask();
-        String nameImage = mImagesName.getText().toString();
+        String nameImage = mImagesName.getText().toString().replace(" ", "-");
         String descrip = mDescrip.getText().toString();
         String keterangan = mKeterangan.getText().toString();
         Boolean statusUp = statusUP = true;

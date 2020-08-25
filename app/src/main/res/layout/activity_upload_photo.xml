@@ -40,8 +40,9 @@
                 android:fontFamily="@font/ubuntu_r"
                 android:hint="Name Images"
                 android:inputType="textAutoComplete"
-                android:maxLength="50"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                android:maxLength="200"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:visibility="gone"/>
 
         </LinearLayout>
 

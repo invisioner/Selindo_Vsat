@@ -22,6 +22,8 @@ public class BaseUrl {
     public static final String listFinishTask = "vsat-api2_prod/Service1.svc/Api-Task/ListFinishTask/";
     public static final String detailTask = "vsat-api2_prod/Service1.svc/Api-Task/DetailTask/";
 
+    public static final String deletePicture = "vsat-api2_prod/Service1.svc/Api-Task/DeletePicture";
+
     public static final String diberikan = "vsat-api2_prod/Service1.svc/Api-SPD/QueryTotalUang/";
     public static final String persetujuan = "vsat-api2_prod/Service1.svc/Api-SPD/QueryTotalApprove/";
     public static final String digunakan = "vsat-api2_prod/Service1.svc/Api-SPD/QueryTotalPenggunaan/";
